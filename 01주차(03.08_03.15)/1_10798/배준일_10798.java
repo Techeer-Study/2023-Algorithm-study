@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
     private static void solution() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         char[][] arr = new char[5][15]; // 이차원 배열 생성
 
         for(int i = 0; i < arr.length; i++) {
@@ -23,6 +23,7 @@ public class Main {
             }
         }
         System.out.println(sb);
+        br.close();
     }
     public static void main(String[] args) throws Exception {
         solution();

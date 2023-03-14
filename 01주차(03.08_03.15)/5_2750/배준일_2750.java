@@ -21,6 +21,7 @@ public class Main {
         }
 
         System.out.print(sb); // 출력
+        br.close();
     }
     public static void main(String[] args) throws Exception {
         solution();
