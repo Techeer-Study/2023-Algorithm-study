@@ -23,7 +23,6 @@ public class 정길연_10870  {
                 return;
         }
 
-
         while (cnt != N) {
             fibo(0,1);
         }
@@ -32,13 +31,12 @@ public class 정길연_10870  {
     }
 
     private static void fibo(int a, int b) {
+        cnt ++;
         if (cnt == N) {
             result = a+b;
             return;
         }
 
-        cnt ++;
         fibo(b, a + b);
-
     }
 }
