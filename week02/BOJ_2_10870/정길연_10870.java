@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class 정길연_10870  {
 
-    static int cnt = 2;
+    static int cnt = 1;
     static int N, result;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,9 +19,6 @@ public class 정길연_10870  {
                 System.out.println(0);
                 return;
             case (1):
-                System.out.println(1);
-                return;
-            case (2):
                 System.out.println(1);
                 return;
         }
