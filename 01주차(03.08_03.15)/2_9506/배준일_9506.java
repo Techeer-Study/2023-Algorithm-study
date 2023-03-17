@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class 배준일_9506 {
     private static void solution() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuffer sb = new StringBuffer();
