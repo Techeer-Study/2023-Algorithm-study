@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class 최준혁_2609 {
     public static void main(String[] args) throws IOException {
         // 최대공약수: 약수들끼리 겹치는 수
         // 최소공배수: 두 수의 곱 / 최대공약수

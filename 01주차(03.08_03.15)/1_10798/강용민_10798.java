@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Main{
+public class 강용민_10798{
     static char[][] arrs;
     static int[] arrs_len;
     static int max_len;
