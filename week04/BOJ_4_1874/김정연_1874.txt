@@ -1,0 +1,27 @@
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
+const [m, ...nums] = input;
+const numbers = nums.map(i => Number(i));
+
+function solution(m,numbers){
+    const stack = [];
+    let answer = '';
+    let count = 1;
+    
+    for(let i = 0; i < m; i+=1){
+        const number = numbers.shift();
+        
+        while(count <= number){
+            stack.push(count++);
+            answer += '+ ';
+        }
+        const Item2 = stack.pop();
+        if(Item2 !=== number){
+            return 'NO';
+        }
+        answer += '-';
+    }
+    return answer.split(' ').join('\n');
+}
+const answer = solution(m,numbers);
+console.log(answer);₩
