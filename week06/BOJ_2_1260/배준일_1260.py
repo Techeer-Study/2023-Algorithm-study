@@ -37,11 +37,9 @@ def dfs(v):
         if not visited[i]:
             dfs(i)
             visited[i] = True
-
-
-bfs(v)
+dfs(v)
 
 visited = [0 for _ in range(n + 1)]
 print()
 
-dfs(v)
+bfs(v)
