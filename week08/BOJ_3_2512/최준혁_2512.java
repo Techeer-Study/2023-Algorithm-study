@@ -1,0 +1,47 @@
+package week08.BOJ_3_2512;
+
+import java.util.*;
+import java.io.*;
+
+public class 최준혁_2512 {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // 지방의 수
+        int n = Integer.parseInt(br.readLine());
+
+        // 예산 요청
+        int[] budgetRequest = Arrays.stream(br.readLine().split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        // 전체 예산
+        int totalBudget = Integer.parseInt(br.readLine());
+
+
+        int remainBudget = totalBudget; // 남은 예산을 담을 변수
+        int diffBudget = 0; // 예산 차이
+        int possibleMaxBudget = 0;  // 가능한 최대의 예산
+        int prevBudget = 0; // 이전 예산
+        Arrays.sort(budgetRequest);
+
+        for (int i = 0; i < n; i++) {
+            diffBudget = budgetRequest[i] - prevBudget; // 현재 최소
+
+            int num = n - i;    // 남은 예산 개수
+
+            if (remainBudget - (diffBudget * num) < 0) {    // 예산이 부족한 경우
+                int share = remainBudget / num;
+                possibleMaxBudget = prevBudget + share;
+                System.out.println(possibleMaxBudget);
+                return;
+            }
+
+            remainBudget = remainBudget - (diffBudget * num);
+            prevBudget = budgetRequest[i];
+        }
+
+        possibleMaxBudget = budgetRequest[n-1];
+        System.out.println(possibleMaxBudget);
+    }
+}
