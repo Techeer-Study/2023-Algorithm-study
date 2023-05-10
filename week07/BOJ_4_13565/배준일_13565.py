@@ -23,12 +23,12 @@ def dfs(x, y):
     return False
 
 
-m, n = map(int, input().split())
+m, n = map(int, input().rstrip().split())
 
 # 2차원 리스트의 맵 정보를 입력 받는다.
 graph = []
 for _ in range(m):
-    graph.append(list(map(int, input())))
+    graph.append(list(map(int, input().rstrip())))
 
 # 바깥쪽에서 전류가 흐르면 안쪽까지 침투하는지 DFS 탐색으로 수행
 for i in range(n):
